@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Coronavirus by Countries</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  
+  <ion-card *ngFor="let cases of countriescases " >
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title></ion-card-title>
+           Country: {{cases.country}} <br>
+           Cases:   {{cases.cases}} | Active: {{cases.active}}<br>
+           Cases Today: {{cases.todayCases}} |  Per One Million: {{cases.casesPerOneMillion}} <br>
+           Critical: {{cases.critical}} | Tests: {{cases.testsPerOneMillion}}<br>
+           Deaths: {{cases.deaths}} | Recovered: {{cases.recovered}}<br>
+           Deaths Today: {{cases.todayDeaths}} | Per One Million: {{cases.deathsPerOneMillion}}<br>
+           Total Tests: {{cases.totalTests}}
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
